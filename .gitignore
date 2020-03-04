@@ -1,2 +1,11 @@
 *.xml
 *.iml
+/webalizer
+/xampp
+/dashboard
+/img
+bitnami.css
+applications.html
+debug.log
+/vendor
+favicon.ico
