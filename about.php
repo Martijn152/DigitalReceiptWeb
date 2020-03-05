@@ -8,8 +8,10 @@ include "view/header.php";
 <?php
 
 require "databaseclasses/Users.php";
+require "databaseclasses/Receipts.php";
 
 $users = new Users();
+$receipts = new Receipts();
 
 //Test function calls --------------------------------------------------
 
@@ -27,8 +29,11 @@ $users = new Users();
 //$user = new User("Steven","Tyler","1948","steven@tyler.com");
 //var_dump($users->update("steven@tyler.com",$user));
 
-//Removing a user
+//Deleting a user
 //var_dump($users->delete("steven@tyler.com"));
+
+//Reading all receipts of a user
+//var_dump($receipts->read('bobdylan@bob.com'));
 
 //----------------------------------------------------------------------
 ?>
