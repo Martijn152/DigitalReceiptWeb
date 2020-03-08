@@ -3,8 +3,8 @@
 
 class Receipt
 {
-    protected string $id;
-    protected string $url;
+    public string $id;
+    public string $url;
 
     public function __construct(string $url, string $id)
     {

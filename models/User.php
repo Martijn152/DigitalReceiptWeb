@@ -3,10 +3,10 @@
 
 class User
 {
-    protected string $firstname;
-    protected string $lastname;
-    protected string $dateofbirth;
-    protected string $id;
+    public string $firstname;
+    public string $lastname;
+    public string $dateofbirth;
+    public string $id;
 
     public function __construct(string $firstname, string $lastname, string $dateofbirth, string $id)
     {
