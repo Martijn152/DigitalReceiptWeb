@@ -15,7 +15,11 @@ if (isset($_GET['table'])) {
     if($table === "u"){
         //echo 'Fetching users table...';
         $users = new Users();
-        $result = $users->read();
+        if(isset($_GET['userid'])){
+            $result = $users->read($_GET['userid']);
+        }else {
+            $result = $users->read();
+        }
         $result = json_encode($result);
         echo $result;
     }

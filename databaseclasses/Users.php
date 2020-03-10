@@ -40,8 +40,13 @@ class Users
 
             $userList = [];
 
-            $newuser = new User($user->data()['firstname'], $user->data()['lastname'], $user->data()['dateofbirth'], $userID);
-            array_push($userList, $newuser);
+            if($user->exists()){
+                $newuser = new User($user->data()['firstname'], $user->data()['lastname'], $user->data()['dateofbirth'], $userID);
+                array_push($userList, $newuser);
+            }
+
+
+
 
             return $userList;
         }

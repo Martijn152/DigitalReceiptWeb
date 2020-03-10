@@ -19,7 +19,23 @@
 //Also redirects the user if they are on a page that is not for them
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            var linksToAdd = ["API", "Receipts"];
+            var linksToAdd = ["Receipts"];
+
+            //ADMIN CHECK
+            if(user.email === "user@user.com") {
+                //this user is an admin
+                //hardcoded might not be the best idea lol
+                //add another link
+                linksToAdd.push("API");
+                linksToAdd.push("Admin");
+            }else{
+                //this user is not an admin
+                //get them off pages that are not for them
+                if (window.location.pathname === "/api.php" || window.location.pathname === "/admin.php") {
+                    window.location.replace("");
+                }
+            }
+
             linksToAdd.forEach(function (text) {
                 var link = document.createElement("a");
                 link.setAttribute("href", text + ".php");
@@ -33,7 +49,7 @@
             });
 
 
-        } else if (window.location.pathname === "/about.php" || window.location.pathname === "/api.php" || window.location.pathname === "/receipts.php") {
+        } else if (window.location.pathname === "/receipts.php") {
             window.location.replace("login.php");
         }
     });

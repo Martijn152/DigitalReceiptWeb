@@ -12,7 +12,7 @@ include "view/footer.php";
 include "view/docEnd.php";
 ?>
 
-<script type="text/javascript" src="js/information.js"></script>
+<script type="text/javascript" src="js/receipts.js"></script>
 
 
 
