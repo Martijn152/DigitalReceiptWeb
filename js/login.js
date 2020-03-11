@@ -10,6 +10,9 @@
 //username: user@user.com
 //pw: useruser
 
+//username: bobdylan@bob.com
+//pw: blowninthewind
+
 function login(){
     var usernameField = document.getElementById("username");
     var passwordField = document.getElementById("password");
