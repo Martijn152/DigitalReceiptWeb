@@ -24,7 +24,7 @@ include "view/header.php";
     <div class="row">
         <div class="column">
             <div class="card">
-                <img src="martijn.jpg" alt="Martijn" style="width:100%">
+                <img src="img/martijn.jpg" alt="Martijn" style="width:100%">
                 <div class="container">
                     <h2>Martijn de Redelijkheid</h2>
                     <p>Some text that describes.</p>
@@ -34,7 +34,7 @@ include "view/header.php";
         </div>
         <div class="column1">
             <div class="card">
-                <img src="kristian.jpg" alt="Kristian" style="width:100%">
+                <img src="img/kristian.jpg" alt="Kristian" style="width:100%">
                 <div class="container">
                     <h2>Kristian Kokoneshi</h2>
                     <p>Some text that describes me.</p>
