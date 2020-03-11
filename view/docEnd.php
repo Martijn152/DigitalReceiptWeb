@@ -4,6 +4,7 @@
 
 <!-- Adding any Firebase Libraries we want to use -->
 <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-storage.js"></script>
 
 <!-- Running the firebaseHelper scripts with the auth check etc. -->
 <script src="/js/firebaseHelper.js"></script>

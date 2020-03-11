@@ -3,6 +3,8 @@
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
 
+            var storage = firebase.storage();
+
             const table = document.getElementById('table');
             table.innerHTML = '';
             const url = 'api.php?table=r&userid=' + user.email;
@@ -16,7 +18,7 @@
                     data = JSON.parse(data);
 
                     //Creating the column names
-                    var keys = Object.keys(data[0]);
+                    var keys = ["Receipt","Download link"];
                     var thead = table.createTHead();
                     var headRow = thead.insertRow();
                     keys.forEach(function (key) {
@@ -36,11 +38,32 @@
                         //Get keys to be able to iterate through the elements for the row
                         var elementKeys = Object.keys(element);
 
-                        //Add new cell for each element in the row
-                        elementKeys.forEach(function (elementCell) {
-                            var cell = row.insertCell();
-                            cell.append(document.createTextNode(element[elementCell]));
+
+                        var gsReference = storage.refFromURL(element['url']);
+
+                        var receiptName = element['url'];
+                        receiptName = receiptName.split('/');
+                        receiptName = receiptName[4].split('.');
+
+                        var cell1 = row.insertCell();
+                        cell1.append(document.createTextNode(receiptName[0]));
+
+
+                        var downloadButton = document.createElement('a');
+
+
+                        gsReference.getDownloadURL().then(function(url) {
+                            downloadButton.id = 'download' + element.email;
+                            downloadButton.href = url;
+                            downloadButton.appendChild(document.createTextNode("Dowload"));
+                        }).catch(function(error) {
+                            console.log(error);
                         });
+
+
+
+                        var cell = row.insertCell();
+                        cell.append(downloadButton);
                     });
 
 
