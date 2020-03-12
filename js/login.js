@@ -13,6 +13,15 @@
 //username: bobdylan@bob.com
 //pw: blowninthewind
 
+//username: steven@tyler.com
+//pw: steventyler
+
+//username: freddie@mercury.com
+//pw: freddiemercury
+
+//username: david@bowie.com
+//pw: davidbowie
+
 function login(){
     var usernameField = document.getElementById("username");
     var passwordField = document.getElementById("password");

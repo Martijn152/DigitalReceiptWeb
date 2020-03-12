@@ -1,6 +1,5 @@
 (function () {
 
-
     const updateModal = document.getElementById("updateModal");
     const createModal = document.getElementById("createModal");
     const deleteModal = document.getElementById("deleteModal");
@@ -33,12 +32,14 @@
             createModal.style.display = "none";
         };
         createConfirm.onclick = function () {
-            create(idField.value, firstnameField.value, lastnameField.value, dateofbirthField.value);
+            console.log("Clicked create button.");
+            create(idField.value, firstnameField.value, lastnameField.value, dateofbirthField.value, passwordField.value);
         };
         var idField = document.getElementById("createId");
         var firstnameField = document.getElementById("createFirstname");
         var lastnameField = document.getElementById("createLastname");
         var dateofbirthField = document.getElementById("createDateofbirth");
+        var passwordField = document.getElementById("createPassword");
     };
 
     read(url);
@@ -102,10 +103,12 @@ function read(url) {
                         var firstnameField = document.getElementById("updateFirstname");
                         var lastnameField = document.getElementById("updateLastname");
                         var dateofbirthField = document.getElementById("updateDateofbirth");
+                        var passwordField = document.getElementById("updateDateofbirth");
                         idField.value = element['id'];
                         firstnameField.value = element['firstname'];
                         lastnameField.value = element['lastname'];
                         dateofbirthField.value = element['dateofbirth'];
+                        passwordField.value = element['dateofbirth'];
 
                     };
                     var cell = row.insertCell();
@@ -152,18 +155,50 @@ function read(url) {
         });
 }
 
-function update(oldid, id, firstname, lastname, dateofbirth) {
-    //update the db here
-    //possibly using php? depending on if that works with both auth and storage, which I dont think
-    //probably just write js lol
+function update(oldid, id, firstname, lastname, dateofbirth, password) {
+    var request = new XMLHttpRequest();
+    var url = "api.php?action=u&id=" + id + "&firstname=" + firstname + "&lastname=" + lastname + "&dateofbirth=" + dateofbirth + "&password=" + password;
+    //http://localhost/api.php?action=c&id=freddie@mercury.com&firstname=Freddie&lastname=Mercury&dateofbirth=1940&password=freddiemercury
+    request.open("GET", url);
+    request.send();
+
+    request.onreadystatechange = (e) => {
+        console.log(request.responseText);
+        window.location.reload();
+    };
+
+    console.log("Sent http request.");
 }
 
-function create(id, firstname, lastname, dateofbirth) {
-    //update the db here
+function create(id, firstname, lastname, dateofbirth, password) {
+    var request = new XMLHttpRequest();
+    var url = "api.php?action=c&id=" + id + "&firstname=" + firstname + "&lastname=" + lastname + "&dateofbirth=" + dateofbirth + "&password=" + password;
+    //http://localhost/api.php?action=c&id=freddie@mercury.com&firstname=Freddie&lastname=Mercury&dateofbirth=1940&password=freddiemercury
+    request.open("GET", url);
+    request.send();
+
+    request.onreadystatechange = (e) => {
+        console.log(request.responseText);
+        window.location.reload();
+
+    };
+
+    console.log("Sent http request.");
 }
 
 function deleteUser(id) {
     //update the db here
+    var request = new XMLHttpRequest();
+    var url = "api.php?action=d&id=" + id;
+    request.open("GET", url);
+    request.send();
+
+    request.onreadystatechange = (e) => {
+        console.log(request.responseText);
+        window.location.reload();
+    };
+
+    console.log("Sent http request.");
 }
 
 

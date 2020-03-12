@@ -1,3 +1,5 @@
+var firebase;
+
 (function () {
 // Firebase configuration
     var firebaseConfig = {

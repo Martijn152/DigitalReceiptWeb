@@ -56,6 +56,14 @@ include "view/header.php";
                     <input type="text" id="updateDateofbirth">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="text" id="updatePassword">
+                </td>
+            </tr>
         </table>
         <br>
         <button id="updateConfirm">Confirm</button>
@@ -97,6 +105,14 @@ include "view/header.php";
                 </td>
                 <td>
                     <input type="text" id="createDateofbirth">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of birth:
+                </td>
+                <td>
+                    <input type="text" id="createPassword">
                 </td>
             </tr>
         </table>

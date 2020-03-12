@@ -7,6 +7,7 @@ class User
     public string $lastname;
     public string $dateofbirth;
     public string $id;
+    public string $password;
 
     public function __construct(string $firstname, string $lastname, string $dateofbirth, string $id)
     {
@@ -14,6 +15,22 @@ class User
         $this->lastname = $lastname;
         $this->dateofbirth = $dateofbirth;
         $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
     }
 
     /**
