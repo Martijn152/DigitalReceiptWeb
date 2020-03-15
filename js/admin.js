@@ -58,7 +58,7 @@ function read(url) {
             console.log(data);
             if (data.length !== 0) {
                 //Creating the column names
-                var keys = Object.keys(data[0]);
+                var keys = ["First Name","Last Name", "Date of Birth","E-mail Address"];
                 keys.push("");
                 keys.push("");
                 var thead = table.createTHead();
@@ -89,6 +89,8 @@ function read(url) {
                     var updateButton = document.createElement('button');
                     updateButton.id = 'update' + element.email;
                     updateButton.appendChild(document.createTextNode("Update"));
+                    updateButton.setAttribute("class","w3-button w3-blue");
+
                     updateButton.onclick = function () {
                         updateModal.style.display = "block";
                         var updateConfirm = document.getElementById("updateConfirm");
@@ -117,6 +119,8 @@ function read(url) {
                     var deleteButton = document.createElement('button');
                     deleteButton.id = 'delete' + element.email;
                     deleteButton.appendChild(document.createTextNode("Delete"));
+                    deleteButton.setAttribute("class","w3-button w3-red");
+
                     //.........................................................................................
                     deleteButton.onclick = function () {
                         deleteModal.style.display = "block";

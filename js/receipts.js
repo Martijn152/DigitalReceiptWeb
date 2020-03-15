@@ -18,7 +18,7 @@
                     data = JSON.parse(data);
 
                     //Creating the column names
-                    var keys = ["Receipt","Download link"];
+                    var keys = ["Receipt","Download Link"];
                     var thead = table.createTHead();
                     var headRow = thead.insertRow();
                     keys.forEach(function (key) {
@@ -55,6 +55,7 @@
                         gsReference.getDownloadURL().then(function(url) {
                             downloadButton.id = 'download' + element.email;
                             downloadButton.href = url;
+                            downloadButton.setAttribute("class","w3-button w3-dark-grey")
                             downloadButton.appendChild(document.createTextNode("Dowload"));
                         }).catch(function(error) {
                             console.log(error);

@@ -2,27 +2,26 @@
 include "view/docStart.php";
 include "view/header.php";
 ?>
+<div style="margin: auto; width: 800px;">
+    <h2>The table below shows all users:</h2>
 
-<h2>The table below shows all users:</h2>
+    <button id="create" class="w3-button w3-green">Create a new user</button>
+    <br><br>
 
-<button id="create">Create a new user</button>
-<br><br>
+    <input type="email" id="searchField" placeholder="User E-mail">
+    <button id="search" class="w3-button w3-light-grey">Search</button>
 
-<input type="email" id="searchField" placeholder="User email">
-<button id="search">Search</button>
+    <br><br>
 
-<br><br>
-
-<table id="table">
-</table>
-
+    <table id="table" class="w3-table-all" style="width: fit-content"></table>
+</div>
 
 <div id="updateModal" class="modal">
     <div class="modal-content">
         <!--This is a nicer looking way of closing the modal-->
         <!--We need to add some stuff in the js to make this work though-->
         <!--<span class="close">&times;</span>-->
-        <h2>Please enter the update to this user and click 'Confirm'.</h2>
+        <h2>Update a user</h2>
         <table>
             <tr>
                 <td>
@@ -66,14 +65,14 @@ include "view/header.php";
             </tr>
         </table>
         <br>
-        <button id="updateConfirm">Confirm</button>
-        <button id="updateCancel">Cancel</button>
+        <button id="updateConfirm" class="w3-button w3-blue">Confirm</button>
+        <button id="updateCancel" class="w3-button w3-grey">Cancel</button>
     </div>
 </div>
 
 <div id="createModal" class="modal">
     <div class="modal-content">
-        <h2>Please enter the information of the new user and click 'Confirm'.</h2>
+        <h2>Create a new user</h2>
         <table>
             <tr>
                 <td>
@@ -117,8 +116,8 @@ include "view/header.php";
             </tr>
         </table>
         <br>
-        <button id="createConfirm">Confirm</button>
-        <button id="createCancel">Cancel</button>
+        <button id="createConfirm" class="w3-button w3-green">Confirm</button>
+        <button id="createCancel" class="w3-button w3-grey">Cancel</button>
     </div>
 </div>
 
@@ -127,7 +126,7 @@ include "view/header.php";
         <!--This is a nicer looking way of closing the modal-->
         <!--We need to add some stuff in the js to make this work though-->
         <!--<span class="close">&times;</span>-->
-        <h2>Are you sure you want to delete this user?</h2>
+        <h2>Delete this user</h2>
         <table>
             <tr>
                 <td>
@@ -163,8 +162,8 @@ include "view/header.php";
             </tr>
         </table>
         <br>
-        <button id="deleteConfirm">Confirm</button>
-        <button id="deleteCancel">Cancel</button>
+        <button id="deleteConfirm" class="w3-button w3-red">Confirm</button>
+        <button id="deleteCancel" class="w3-button w3-grey">Cancel</button>
     </div>
 </div>
 

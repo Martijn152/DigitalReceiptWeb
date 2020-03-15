@@ -1,41 +1,4 @@
-/*
- * CSS for all the PHP files
- */
-html {
-    overflow-y: scroll;
-}
 
-body {
-    margin: 8px auto;
-    background: #fff;
-    width: 700px;
-}
-
-canvas {
-    transition: opacity 1s;
-}
-
-table {
-    background-color: mintcream;
-}
-
-th, tr, table, td{
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: left;
-    padding: 5px;
-}
-
-th{
-    height: 20px;
-    background-color: chartreuse;
-}
-
-h3{
-    color: #008cba;
-    font-family: "Droid Sans", serif;
-    font-size: 20px;
-}
 
 /* The Modal (background) */
 .modal {

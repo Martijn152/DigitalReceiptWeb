@@ -41,12 +41,11 @@ var firebase;
             linksToAdd.forEach(function (text) {
                 var link = document.createElement("a");
                 link.setAttribute("href", text + ".php");
+                link.setAttribute("class", "w3-button");
                 var linkText = document.createTextNode(text);
-                var dividerText = document.createTextNode(" | ");
                 link.appendChild(linkText);
 
                 var nav = document.getElementById("nav");
-                nav.appendChild(dividerText);
                 nav.appendChild(link);
             });
 
