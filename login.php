@@ -1,14 +1,25 @@
+<link rel="stylesheet" href="css/login.css">
 <?php
 include "view/docStart.php";
 include "view/header.php";
 ?>
 
-<label for="username"><b>Username</b></label>
-<input id ="username" type="text" placeholder="Username" name="username" required><br>
-<label for="password"><b>Password</b></label>
-<input id ="password" type="password" placeholder="Password" name="password" required><br>
+<div class="login_box">
 
-<button onclick="login()">Login</button>
+    <h1>Login</h1>
+    <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" placeholder="Username" name="" value="">
+    </div>
+
+    <div class="textbox">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" placeholder="Password" name="" value="">
+    </div>
+
+    <input class="btn" type="button" name="" value="Login" onclick="login()">
+
+</div>
 
 <?php
 include "view/footer.php";
