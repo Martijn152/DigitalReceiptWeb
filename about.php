@@ -27,7 +27,7 @@ include "view/header.php";
                 <img src="img/martijn.jpg" alt="Martijn" style="width:100%">
                 <div class="container">
                     <h2>Martijn de Redelijkheid</h2>
-                    <p>Some text that describes.</p>
+                    <p>Martijn is a third year student of the Software Development programme at HKR. He is interested in Computer Security and has worked mostly on the back-end and client-side functional code for this project.</p>
                     <p>martijn@example.com</p>
                 </div>
             </div>
@@ -78,6 +78,7 @@ $receipts = new Receipts();
 //----------------------------------------------------------------------
 ?>
 
+<link rel="stylesheet" href="css/about.css">
 
 <?php
 include "view/footer.php";
