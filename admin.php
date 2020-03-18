@@ -68,7 +68,7 @@ include "view/header.php";
                     Password:
                 </td>
                 <td>
-                    <input type="text" id="updatePassword">
+                    <input type="password" id="updatePassword">
                 </td>
             </tr>
         </table>
@@ -116,10 +116,10 @@ include "view/header.php";
             </tr>
             <tr>
                 <td>
-                    Date of birth:
+                    Password:
                 </td>
                 <td>
-                    <input type="text" id="createPassword">
+                    <input type="password" id="createPassword">
                 </td>
             </tr>
         </table>
