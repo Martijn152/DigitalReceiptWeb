@@ -2,6 +2,14 @@
 include "view/docStart.php";
 include "view/header.php";
 ?>
+
+<style>
+    body {
+        background-image: url("img/light.jpg");
+        background-size: cover
+    }
+</style>
+
 <div style="margin: auto; width: 800px;">
     <h2>The table below shows all users:</h2>
 

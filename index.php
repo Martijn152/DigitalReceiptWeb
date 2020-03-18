@@ -8,8 +8,6 @@ include "view/header.php";
         background-image: url("img/light.jpg");
         background-size: cover
     }
-
-
 </style>
 
 

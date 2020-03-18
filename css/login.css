@@ -41,6 +41,10 @@ body {
     text-align: center;
 }
 
+::placeholder {
+    color: lightgrey;
+}
+
 .textbox input {
     border: none;
     outline: none;

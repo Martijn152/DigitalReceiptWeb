@@ -2,6 +2,14 @@
 include "view/docStart.php";
 include "view/header.php";
 ?>
+
+<style>
+    body {
+        background-image: url("img/light.jpg");
+        background-size: cover
+    }
+</style>
+
 <div style="margin: auto; width: 800px;">
     <h2>Receipts</h2>
     <p>You can add receipts to your account by having the QR code on you Android app scanned by a Payment Terminal that works with the Digital Receipt System.</p>
