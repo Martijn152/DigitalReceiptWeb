@@ -29,7 +29,7 @@ include "view/header.php";
                 <div class="container">
                     <h2>Martijn de Redelijkheid</h2>
                     <p>Martijn is a third year student of the Software Development programme at HKR. He is interested in Computer Security and has worked mostly on the back-end and client-side functional code for this project.</p>
-                    <p>martijn@example.com</p>
+
                 </div>
             </div>
         </div>
@@ -38,8 +38,7 @@ include "view/header.php";
                 <img src="img/kristian.jpg" alt="Kristian" style="width:100%">
                 <div class="container">
                     <h2>Kristian Kokoneshi</h2>
-                    <p>Some text that describes me.</p>
-                    <p>kristian@example.com</p>
+                    <p>Kristian is an alumni at Kristianstad University, currently in his final year of studies in Bc.S Softare Development. His hobbies include movies, music, programming and sports. He contributed to the front end development of this project as well on some part of the back-end part.</p>
                 </div>
             </div>
         </div>
